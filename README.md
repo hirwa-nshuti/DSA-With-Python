@@ -1,5 +1,5 @@
 <h1 align="center"> DSA-With-Python </h1>
 
-<p> A repository for learning purpose. Along the journey of learning the Data Structures and Algorithms using python this repo will hold all learning resources and code snipets that I'll be using
+<p> After basics we always need a brief understanding about Data Structures and Algorithms. This repository holds code snippets and reference materials guiding to design of Abstract data structures and Implementation of different algorithms using the python language.
 </p>
 
