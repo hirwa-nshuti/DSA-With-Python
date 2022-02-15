@@ -111,7 +111,8 @@ if __name__ == "__main__":
     # Setting the element at 5th index of our array to 12
     print(f"The element at 5th index before is: {new_array[5]}")
     new_array.__setitem__(5, 12)
-    print(f"The value at 5th index became {new_array[5]}")
+
+    print(f"After Set The value at 5th index became {new_array[5]}")
 
     # Getting item at the index value n = 7
     n = 7
