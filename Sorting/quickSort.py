@@ -1,7 +1,7 @@
 """
-Quick Sort we cna take first elemnt of array and put in middle where left is less than pivot
-and the right is greater than pivot
-It is also called divide and conquer problem
+Quick Sort we can take first element of array and put in middle where left is less than reference
+and the right is greater than reference
+This is a divide and conquer problem
 The method of dividing is called partition
 Partition schemes: Hoare Partition, Lomuto Partition
 """
@@ -14,17 +14,17 @@ def swap(a, b, arr):
 
 
 def partition(elements, start, end):
-    pivot_index = start
-    pivot = elements[pivot_index]
+    p_index = start
+    ref = elements[p_index]
     while start < end:
-        while start < len(elements) and elements[start] <= pivot:
+        while start < len(elements) and elements[start] <= ref:
             start += 1
 
-        while elements[end] > pivot:
+        while elements[end] > ref:
             end -= 1
         if start < end:
             swap(start, end, elements)
-    swap(pivot_index, end, elements)
+    swap(p_index, end, elements)
     return end
 
 
