@@ -1,15 +1,21 @@
 """
-**QUESTION:** Alice has some cards with numbers written on them. She arranges the cards in decreasing order,
-and lays them out face down in a sequence on a table. She challenges Bob to pick out the card containing a given
-number by turning over as few cards as possible. Write a function to help Bob locate the card.
+QUESTION: Alice has some cards with numbers written on them. 
+She arranges the cards in decreasing order,
+and lays them out face down in a sequence on a table. 
+She challenges Bob to pick out the card containing a given
+number by turning over as few cards as possible.
+Write a function to help Bob locate the card.
 
 Typical approach to the problem
 -------------------------------
-**Problem statement:** We have a task to search for an element in a decreasing ordered list and return its index.
+Problem statement: We have a task to search for an element in
+a decreasing ordered list and return its index.
 
-**Inputs:** The sorted sequence ex: [10, 5, 3, 2 , 1], and the variable to search ex: 3.
-**Outputs:** The position of searched variable ex: 2 if not present the function will return 0
+Inputs: The sorted sequence ex: [10, 5, 3, 2 , 1], and the variable to search ex: 3.
+Outputs: The position of searched variable ex: 2,
+if not present the function will return 0
 """
+
 
 test_cases = [
     {
@@ -33,8 +39,8 @@ test_cases = [
     {
         'inputs': {
             'cards': [10, 9, 5, 3, 2, 1],
-            'query': 1, },
-        'output': 5
+            'query': 3, },
+        'output': 3
     },
     {
         'inputs': {
@@ -56,18 +62,42 @@ def find_card_linear(cards, query):
     return -1
 
 
-def find_card(cards, query):
-    pass
+def find_card_bin(cards, query):
+    left_index = 0
+    right_index = len(cards) - 1
+    mid_index = 0
+
+    while left_index <= right_index:
+        mid_index = (left_index + right_index) // 2
+        mid_number = cards[mid_index]
+        if mid_number == query:
+            return mid_index
+        if mid_number < query:
+            right_index = mid_index - 1
+        else:
+            left_index = mid_index + 1
+
+    return -1
 
 
-# Test cases
-if __name__ == "__main__":
-    for test in test_cases:
+def test_function(fun_name, tests):
+    """
+    Testing the function outputs
+    """
+    for test in tests:
         print(f"Inputs: {test['inputs']}")
         print(f"Output: {test['output']}")
         print("----------")
-        result = find_card_linear(**test['inputs']) == test['output']
-        if result:
+        result = (fun_name(**test['inputs']) == test['output'])
+        if result is True:
             print("Test passed\n")
         else:
             print("Test failed\n")
+
+# Test cases
+if __name__ == "__main__":
+    print("Testing the linear Search approach\n")
+    test_function(find_card_linear, test_cases)
+
+    print("Testing the binary search approach\n")
+    test_function(find_card_bin, test_cases)
