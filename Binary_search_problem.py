@@ -16,7 +16,7 @@ test_cases = [
         'inputs': {
             'cards': [10, 8, 5, 4, 2, 1],
             'query': 5, },
-        'output': 3
+        'output': 2
     },
     {
         'inputs': {
@@ -45,5 +45,29 @@ test_cases = [
 ]
 
 
+# First approach linear search
+def find_card_linear(cards, query):
+    size = len(cards)
+    if size == 0:
+        return -1
+    for i in range(size):
+        if cards[i] == query:
+            return i
+    return -1
+
+
 def find_card(cards, query):
     pass
+
+
+# Test cases
+if __name__ == "__main__":
+    for test in test_cases:
+        print(f"Inputs: {test['inputs']}")
+        print(f"Output: {test['output']}")
+        print("----------")
+        result = find_card_linear(**test['inputs']) == test['output']
+        if result:
+            print("Test passed\n")
+        else:
+            print("Test failed\n")
