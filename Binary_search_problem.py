@@ -19,40 +19,60 @@ if not present the function will return 0
 
 test_cases = [
     {
-        'inputs': {
-            'cards': [10, 8, 5, 4, 2, 1],
-            'query': 5, },
-        'output': 2
+        "inputs": {
+            "cards": [10, 8, 5, 4, 2, 1],
+            "query": 5,
+        },
+        "output": 2,
     },
     {
-        'inputs': {
-            'cards': [8, 6, 2, 1],
-            'query': 8, },
-        'output': 0
+        "inputs": {
+            "cards": [8, 6, 2, 1],
+            "query": 8,
+        },
+        "output": 0,
     },
     {
-        'inputs': {
-            'cards': [],
-            'query': 5, },
-        'output': -1
+        "inputs": {
+            "cards": [],
+            "query": 5,
+        },
+        "output": -1,
     },
     {
-        'inputs': {
-            'cards': [10, 9, 5, 3, 2, 1],
-            'query': 3, },
-        'output': 3
+        "inputs": {
+            "cards": [10, 9, 5, 3, 2, 1],
+            "query": 3,
+        },
+        "output": 3,
     },
     {
-        'inputs': {
-            'cards': [10],
-            'query': 7, },
-        'output': -1
+        "inputs": {
+            "cards": [10],
+            "query": 7,
+        },
+        "output": -1,
     },
 ]
 
 
 # First approach linear search
 def find_card_linear(cards, query):
+    """
+    The Linear search function to return the position of card being searched.
+
+    Parameters
+    ----------
+    cards
+        A descending ordered list of cards numerical values
+    query
+        A card to look for in the cards input
+
+    Returns
+    -------
+    ret
+        The index position of the card if present and -1 if not present
+    """
     size = len(cards)
     if size == 0:
         return -1
@@ -63,6 +83,21 @@ def find_card_linear(cards, query):
 
 
 def find_card_bin(cards, query):
+    """
+    The Binary search function to return the position of card being searched.
+
+    Parameters
+    ----------
+    cards
+        A descending ordered list of cards numerical values
+    query
+        A card to look for in the cards input
+
+    Returns
+    -------
+    ret
+        The index position of the card if present and -1 if not present
+    """
     left_index = 0
     right_index = len(cards) - 1
     mid_index = 0
@@ -83,16 +118,29 @@ def find_card_bin(cards, query):
 def test_function(fun_name, tests):
     """
     Testing the function outputs
+
+    Parameters
+    ----------
+    fun_name
+        The name of function to test
+    tests
+        Dictionary containing the test cases
+
+    Returns
+    -------
+    ret
+        None
     """
     for test in tests:
         print(f"Inputs: {test['inputs']}")
         print(f"Output: {test['output']}")
         print("----------")
-        result = (fun_name(**test['inputs']) == test['output'])
+        result = fun_name(**test["inputs"]) == test["output"]
         if result is True:
             print("Test passed\n")
         else:
             print("Test failed\n")
+
 
 # Test cases
 if __name__ == "__main__":
