@@ -15,7 +15,7 @@ clear_2D: Setting the array elements to a given value
 getitem: Returns value stored in An array at given index
 setitem: Modify array element at a given index to a given value
 """
-from .OneDArray import Array
+from .one_d_array import Array
 
 
 class Array2D:
@@ -60,8 +60,9 @@ class Array2D:
         assert len(indices) == 2, "Invalid index"
         row = indices[0]
         col = indices[1]
-        assert 0 <= row < self.rowsNumber() \
-               and 0 <= col < self.columnsNumber(), "Index out of range"
+        assert (
+            0 <= row < self.rowsNumber() and 0 <= col < self.columnsNumber()
+        ), "Index out of range"
         array1D = self._rowsNumber[row]
         return array1D[col]
 
@@ -75,8 +76,9 @@ class Array2D:
         assert len(indices) == 2, "Invalid index try again"
         row = indices[0]
         col = indices[1]
-        assert 0 <= row < self.rowsNumber() \
-               and 0 <= col < self.columnsNumber(), "Index out of range"
+        assert (
+            0 <= row < self.rowsNumber() and 0 <= col < self.columnsNumber()
+        ), "Index out of range"
         array1D = self._rowsNumber[row]
         array1D[col] = value
 

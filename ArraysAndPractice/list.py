@@ -1,51 +1,98 @@
 """"
 A Menu driven program for list operations
 """
-def sumation(lst:list):
+
+
+def sumation(lst: list):
+    """
+    Summation of list elements
+    """
     return sum(lst)
 
 
-def indexing(lst:list, index):
-    x = lst[index]
-    return x
+def indexing(lst: list, index):
+    """
+    Indexing of list elements
+    """
+    x_data = lst[index]
+    return x_data
 
-def appending(lst:list, element):
+
+def appending(lst: list, element):
+    """
+    Appending of list elements
+    """
     lst.append(element)
 
-def inserting(lst:list, index, element):
+
+def inserting(lst: list, index, element):
+    """
+    Inserting in a list
+    """
     if index in range(len(lst)):
         lst.insert(index, element)
     else:
-        return "Index error"
-def copy_list(lst:list):
-    copied = lst.copy()
-    return copied
+        pass
 
-def extending(lst:list, extenstion):
+
+def copy_list(lst: list):
+    """
+    Copying elements
+    """
+    copied_lst = lst.copy()
+    return copied_lst
+
+
+def extending(lst: list, extenstion):
+    """
+    Extending elements
+    """
     lst.extend(extenstion)
 
-def removing(lst:list, value):
+
+def removing(lst: list, value):
+    """
+    Removing elements
+    """
     lst.remove(value)
 
-def sorting(lst:list):
+
+def sorting(lst: list):
+    """
+    Sorting
+    """
     lst.sort()
 
-def reversing(lst:list):
+
+def reversing(lst: list):
+    """
+    Reversing
+    """
     lst = lst[::-1]
 
 
-def clearing(lst:list):
+def clearing(lst: list):
+    """
+    Clearing Elements
+    """
     lst.clear()
+
+
 def get_inputs():
+    """
+    Getting inputs
+    """
     inputs = []
-    x = int(input("Enter the number of values to store in a list: "))
-    for _ in range(x):
+    data_in = int(input("Enter the number of values to store in a list: "))
+    for _ in range(data_in):
         inputs.append(int(input("Enter the element and press enter: ")))
     return inputs
+
+
 if __name__ == "__main__":
-    keep_running = True
+    KEEP_RUNNING = True
     data = get_inputs()
-    while keep_running:
+    while KEEP_RUNNING:
         print("\nList operations select from")
         print("Press 1 : To find sum of list elements")
         print("Press 2 : To find index of given element")
@@ -65,9 +112,9 @@ if __name__ == "__main__":
         if key == 0:
             prompt_user = input("Do you want to quit y/n: ")
             if prompt_user == "y":
-                keep_running = False
+                KEEP_RUNNING = False
                 break
-            elif prompt_user == "n":
+            if prompt_user == "n":
                 continue
         elif key == 1:
             print(f"\nSum of your list is {sumation(data)}")
@@ -89,8 +136,8 @@ if __name__ == "__main__":
         elif key == 6:
             print("\nEnter elements to extend to a list")
             to_ext = get_inputs()
-            extended = extending(data, to_ext)
-            print(f"\nExtended list is: {extended}")
+            extending(data, to_ext)
+            print(f"\nExtended list is: {data}")
         elif key == 7:
             rem = int(input("Enter the value to remove: "))
             removing(data, rem)
