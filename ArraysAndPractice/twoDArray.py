@@ -15,7 +15,7 @@ clear_2D: Setting the array elements to a given value
 getitem: Returns value stored in An array at given index
 setitem: Modify array element at a given index to a given value
 """
-from OneDArray import Array
+from .OneDArray import Array
 
 
 class Array2D:
