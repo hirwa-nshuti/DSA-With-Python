@@ -10,7 +10,7 @@ format:
 	black *.py
 
 lint:
-	pylint $(git ls-files '*.py')
+	pylint *
 
 test:
 	python -m pytest ArraysAndPractice/tests.py
