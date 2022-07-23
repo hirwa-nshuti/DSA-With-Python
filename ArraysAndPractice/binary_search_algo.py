@@ -3,7 +3,7 @@ Author: Felix
 -------
 Date: 15 - February - 2022
 ----
-Last Modified: 15 - February - 2022
+Last Modified: 23 - July - 2022
 --------------
 
 Binary Search algorithm on a sorted list
@@ -11,12 +11,14 @@ Binary Search algorithm on a sorted list
 
 
 def binarySearch(arr, target):
+    """
+    Binary Search Algorithm
+    """
     lower = 0
     high = len(arr) - 1
 
     while lower <= high:
         mid_index = (lower + high) // 2
-
         if arr[mid_index] == target:
             return mid_index
         elif arr[mid_index] > target:

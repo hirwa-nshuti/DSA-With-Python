@@ -3,7 +3,7 @@ Author: Felix
 -------
 Date: 15 - February - 2022
 ----
-Last Modified: 15 - February - 2022
+Last Modified: 23 - July - 2022
 --------------
 
 Implementing the linear search on an array in three different conditions.

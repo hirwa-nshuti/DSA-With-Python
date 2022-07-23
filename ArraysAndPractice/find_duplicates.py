@@ -3,7 +3,7 @@ Author: Felix
 -------
 Date: 22 - February - 2022
 ----
-Last Modified: 22 - February - 2022
+Last Modified: 23 - July - 2022
 --------------
 
 Finding Duplicates in both unsorted list and sorted list.
@@ -12,6 +12,10 @@ Finding Duplicates in both unsorted list and sorted list.
 
 
 class Duplicates:
+    """
+    Duplicates
+    """
+
     def __init__(self, lst: list):
         """
         Initializing our list
@@ -21,6 +25,9 @@ class Duplicates:
         self.length = len(self.lst)
 
     def findDuplicates(self) -> None:
+        """
+        Finding Duplicates in the list
+        """
         max_el = max(self.lst) + 1
         helper = [0] * max_el
         for i in range(self.length):

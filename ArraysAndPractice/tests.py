@@ -1,7 +1,10 @@
-from BinarySearch import binarySearch
+from .binary_search_algo import binarySearch
 
 
 def test_binary_search():
+    """
+    Testing the binary search algorithm
+    """
     lst = [1, 2, 7, 14, 18, 20]
     target_val = [2, 0, 14, 18, 20, 100]
 
