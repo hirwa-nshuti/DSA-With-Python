@@ -1,7 +1,6 @@
 def find_missing(array):
     """
     Finding the missing element in an unsorted array
-    
     Parameters
     ----------
     array

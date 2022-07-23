@@ -4,7 +4,6 @@ from .binary_search_algo import binarySearch
 def test_binary_search():
     """
     Testing the binary search algorithm
-    
     Parameters
     ----------
     None
