@@ -14,7 +14,10 @@ Implementing the linear search on an array in three different conditions.
 """
 
 
-class LinearSearch:
+class Linearsearch:
+    """
+    The Linear search class
+    """
     def __init__(self, searching: list):
         """
         Initializing our linear search

@@ -1,6 +1,16 @@
 def find_missing(array):
     """
     Finding the missing element in an unsorted array
+    
+    Parameters
+    ----------
+    array
+        An array to look up in
+
+    Returns
+    -------
+    ret
+        a list with missing values
     """
     low = min(array)
     high = max(array)

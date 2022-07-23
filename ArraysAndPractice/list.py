@@ -114,7 +114,7 @@ if __name__ == "__main__":
             if prompt_user == "y":
                 KEEP_RUNNING = False
                 break
-            elif prompt_user == "n":
+            if prompt_user == "n":
                 continue
         elif key == 1:
             print(f"\nSum of your list is {sumation(data)}")
