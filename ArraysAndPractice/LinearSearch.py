@@ -35,7 +35,7 @@ class Linearsearch:
         for i in range(self.n_elements):
             if self.searching[i] == element:
                 return i
-            elif self.searching[i] > element:
+            if self.searching[i] > element:
                 return None
         return None
 

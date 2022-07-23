@@ -1,3 +1,11 @@
+"""
+Author: Felix
+------
+Date: 15 - February - 2022
+----
+Last Modified: 23 - July - 2022
+-------------
+"""
 def find_missing(array):
     """
     Finding the missing element in an unsorted array
@@ -5,7 +13,6 @@ def find_missing(array):
     ----------
     array
         An array to look up in
-
     Returns
     -------
     ret
