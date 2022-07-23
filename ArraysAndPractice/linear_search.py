@@ -68,7 +68,7 @@ class Linearsearch:
 if __name__ == "__main__":
     data_sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     print("Searching in a sorted array")
-    sorted_search = LinearSearch(data_sorted)
+    sorted_search = Linearsearch(data_sorted)
     for _ in range(2):
         search_ele = int(input("Enter the value to search: \n"))
         index_sorted = sorted_search.search_sorted(search_ele)
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
     print("\nSearching in an Unsorted array\n")
     unsorted_arr = [12, 43, 21, 90, 1, 0, 19, 2]
-    unsorted_search = LinearSearch(unsorted_arr)
+    unsorted_search = Linearsearch(unsorted_arr)
     for _ in range(2):
         search_ele = int(input("Enter the value to search: \n"))
         index_unsort = unsorted_search.search_unsorted(search_ele)
