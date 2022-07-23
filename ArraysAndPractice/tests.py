@@ -6,7 +6,7 @@ Date: 15 - February - 2022
 Last Modified: 23 - July - 2022
 -------------
 """
-from binary_search_algo import binarySearch
+from binary_search_algo import binary_search
 
 
 def test_binary_search():
@@ -26,7 +26,7 @@ def test_binary_search():
     results = []
 
     for i in target_val:
-        results.append(binarySearch(lst, i))
+        results.append(binary_search(lst, i))
 
     assert results == [1, -1, 3, 4, 5, -1]
 
