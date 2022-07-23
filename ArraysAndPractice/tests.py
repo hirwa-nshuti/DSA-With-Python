@@ -28,7 +28,7 @@ def test_binary_search():
     for i in target_val:
         results.append(binary_search(lst, i))
 
-    assert results == [0, -1, 3, 4, 5, -1]
+    assert results == [1, -1, 3, 4, 5, -1]
 
 
 if __name__ == "__main__":
