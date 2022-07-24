@@ -1,7 +1,7 @@
 name: Formatting check
 on: [push, pull_request]
 jobs:
-  general_tests:
+  lint_check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -15,3 +15,6 @@ jobs:
     - name: Check linting
       run: |
         make lint
+    - name: check using flake8
+      run: |
+        make flake
