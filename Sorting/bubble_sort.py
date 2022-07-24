@@ -12,6 +12,6 @@ def bubble_sort(lst):
 
 
 if __name__ == "__main__":
-    arr=[3, 2, 0, 9, 12, 32, 23, 10]
+    arr = [3, 2, 0, 9, 12, 32, 23, 10]
     bubble_sort(arr)
-    print(arr)    
+    print(arr)

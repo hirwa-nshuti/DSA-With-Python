@@ -1,7 +1,7 @@
 """
-QUESTION: Alice has some cards with numbers written on them. 
+QUESTION: Alice has some cards with numbers written on them.
 She arranges the cards in decreasing order,
-and lays them out face down in a sequence on a table. 
+and lays them out face down in a sequence on a table.
 She challenges Bob to pick out the card containing a given
 number by turning over as few cards as possible.
 Write a function to help Bob locate the card.
@@ -11,7 +11,8 @@ Typical approach to the problem
 Problem statement: We have a task to search for an element in
 a decreasing ordered list and return its index.
 
-Inputs: The sorted sequence ex: [10, 5, 3, 2 , 1], and the variable to search ex: 3.
+Inputs: The sorted sequence ex: [10, 5, 3, 2 , 1],
+and the variable to search ex: 3.
 Outputs: The position of searched variable ex: 2,
 if not present the function will return 0
 """

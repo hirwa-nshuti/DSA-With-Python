@@ -1,10 +1,10 @@
 """
 Author: Felix
-------
+
 Date: 15 - February - 2022
-----
+
 Last Modified: 23 - July - 2022
--------------
+
 """
 from binary_search_algo import binary_search
 

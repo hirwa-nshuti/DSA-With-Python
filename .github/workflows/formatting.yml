@@ -12,6 +12,9 @@ jobs:
     - name: Install dependencies
       run: |
         make install
+    - name: Format with black
+      run: | 
+        make format
     - name: Check linting
       run: |
         make lint

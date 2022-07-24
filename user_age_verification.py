@@ -6,7 +6,8 @@ Date: 15 - February - 2022
 Last Modified: 23 - July - 2022
 -------------
 
-Suppose we want to write a program that will check if a user is eligible to use our service basing on user age,
+Suppose we want to write a program that will check if a user is eligible 
+to use our service basing on user age,
 when a user is 18+ years old he is eligible but when he is <18 he is not.
 Let's build this program
 """
@@ -16,7 +17,8 @@ import sys
 
 class CheckDate:
     """
-    Creating a class that will check user input date and decide where he is eligible for service or not
+    Creating a class that will check user input date and decide 
+    whether he is eligible for service or not
     """
 
     def __init__(self, year, month, day):
