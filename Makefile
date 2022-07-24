@@ -6,7 +6,7 @@ format:
 	black *.py
 
 lint:
-	for dir in binary_search_algo.py list.py find_missing_unsorted.py LinearSearch.py tests.py ; do \
+	for dir in binary_search_algo.py list.py find_missing_unsorted.py linear_search.py tests.py ; do \
     pylint ArraysAndPractice/$$dir ; \
 	done
 flake:

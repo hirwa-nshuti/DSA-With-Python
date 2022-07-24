@@ -17,7 +17,7 @@ import sys
 
 class CheckDate:
     """
-    Creating a class that will check user input date and decide 
+    Creating a class that will check user input date and decide
     whether he is eligible for service or not
     """
 
