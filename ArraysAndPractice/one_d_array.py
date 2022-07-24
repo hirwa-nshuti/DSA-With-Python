@@ -6,7 +6,8 @@ Date: 15 - February - 2022
 Last Modified: 23 - July - 2022
 -------------
 
-Writing an array ADT to implement array operation in python as we initially has python
+Writing an array ADT to implement array operation in
+python as we initially has python
 list and this code will implement array using ctypes module
 
 This array ADT will be 1D array with size elements

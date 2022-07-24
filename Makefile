@@ -2,10 +2,6 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-install-aws:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-
 format:
 	black *.py
 
@@ -14,8 +10,6 @@ lint:
     pylint ArraysAndPractice/$$dir ; \
 	done
 flake:
-	for dir in binary_search_algo.py list.py find_missing_unsorted.py LinearSearch.py tests.py ; do \
-    flake8 ArraysAndPractice/$$dir ; \
-	done	
+	flake8 $(git ls-files '*.py')	
 test:
 	python -m pytest ArraysAndPractice/tests.py

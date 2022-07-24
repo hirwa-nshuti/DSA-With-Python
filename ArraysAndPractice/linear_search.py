@@ -92,4 +92,5 @@ if __name__ == "__main__":
     un_arr = [12, 281, 21872, -12, 18271, 12, 10, 9, 26, 54, 28]
     search_small = Linearsearch(un_arr)
     smallest, index_s = search_small.search_smallest_val()
-    print(f"The smallest number in array is {smallest} and is located at {index_s}")
+    print(f"The smallest number in array is {smallest}\
+         and is located at {index_s}")

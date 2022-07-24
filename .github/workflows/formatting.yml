@@ -1,7 +1,7 @@
-name: Formating test
+name: Formatting check
 on: [push, pull_request]
 jobs:
-  test_formatting:
+  lint_check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -12,13 +12,12 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Format code with Python black
-      run: |
+    - name: Format with black
+      run: | 
         make format
-    - name: check code formating with flake 8
-    run: |
-      make flake
-    - name: Lint with Pylint
+    - name: Check linting
       run: |
         make lint
-    
+    - name: check using flake8
+      run: |
+        make flake
