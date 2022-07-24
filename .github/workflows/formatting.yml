@@ -1,4 +1,4 @@
-name: General tests
+name: Formating test
 on: [push, pull_request]
 jobs:
   build:
@@ -12,6 +12,13 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Test with Pytest
+    - name: Format code with Python black
       run: |
-        make test
+        make format
+    - name: check code formating with flake 8
+    run: |
+      make flake
+    - name: Lint with Pylint
+      run: |
+        make lint
+    
