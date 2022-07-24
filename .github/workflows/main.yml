@@ -1,7 +1,7 @@
 name: General tests
 on: [push, pull_request]
 jobs:
-  general tests:
+  general_tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
