@@ -38,8 +38,12 @@ def quick_sort(elements, start, end):
 
 
 if __name__ == "__main__":
-    el = [[11, 9, 29, 7, 2, 15, 28], [], [10, 8, 2, 1, 0],
-         [1, 2], [20, 1920, 0, 0]]
+    el = [
+        [11, 9, 29, 7, 2, 15, 28],
+        [], 
+        [10, 8, 2, 1, 0],
+        [1, 2], 
+        [20, 1920, 0, 0]]
     for element in el:
         quick_sort(element, 0, len(element) - 1)
         print(f"The sorted array: {element}")
