@@ -1,5 +1,5 @@
 """
-Quick Sort we can take first element of array and put in 
+Quick Sort we can take first element of array and put in
 middle where left is less than reference
 and the right is greater than reference
 This is a divide and conquer problem
@@ -38,7 +38,7 @@ def quick_sort(elements, start, end):
 
 
 if __name__ == "__main__":
-    el = [[11, 9, 29, 7, 2, 15, 28], [], [10, 8, 2, 1, 0],\
+    el = [[11, 9, 29, 7, 2, 15, 28], [], [10, 8, 2, 1, 0],
          [1, 2], [20, 1920, 0, 0]]
     for element in el:
         quick_sort(element, 0, len(element) - 1)

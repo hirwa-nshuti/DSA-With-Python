@@ -1,4 +1,4 @@
-def insertion_sort(lst:list): 
+def insertion_sort(lst: list):
     for i in range(1, len(lst)):
         anchor = lst[i]
         j = i - 1
@@ -12,4 +12,3 @@ if __name__ == "__main__":
     arr = [3, 2, 0, 9, 12, 32, 23, 10]
     insertion_sort(arr)
     print(arr)
-    
