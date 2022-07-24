@@ -1,4 +1,4 @@
-name: General tests
+name: Formatting check
 on: [push, pull_request]
 jobs:
   general_tests:
@@ -12,6 +12,6 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Test with Pytest
+    - name: Check linting
       run: |
-        make test
+        make lint
