@@ -15,9 +15,17 @@ jobs:
     - name: Format code with Python black
       run: |
         make format
-    - name: Lint with Pylint
-      run: |
-        make lint
     - name: Test with Pytest
       run: |
         make test
+name: Docstring test
+on: [push, pull_request]
+jobs:
+  steps:
+    -name: check code formating with flake 8
+    run: |
+      make flake
+    - name: Lint with Pylint
+      run: |
+        make lint
+    
